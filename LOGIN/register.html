@@ -4,39 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign up Page</title>
-    <link rel="stylesheet" type="text/css" href="../CSS/homestyle.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/style.css">
 </head>
 <body>
     <header>
         <h2>SKIN CLEAR</h2>
         <h2>Sign up page</h2>
     </header>
-    <div class="sidebar">
-        <p>Welcome to Skin Clear. A world of unparalleled freshness awaits you.</p>
-        <p>We provide you with step by step routines specifically created for your skintype and time of the day.</p>
-        <p>Get Introduced to some of the top dermatologists in Ghana right here on this platform</p>
-        <p>Sign up now and achieve your skin goals</p>
-    </div>
-    <div class="signup-container">
+    <div class="container">
         <form action="../action/register_user_action.php" method="POST" name="registerForm" id="registerForm">
-            <label for=" username">Username</label>
-            <input type="text" name="username" id="username" required>
-            <label for = "skintype">Skintype</label>
-            <div>
-            <input type="radio" id="Oily" name="skintype" value="0">
-            <label for="Oily">Oily Skin</label><br>
-            <input type="radio" id="Dry" name="skintype" value="1">
-            <label for="Dry">Dry Skin</label><br>
-            <input type="radio" id="Combination" name="skintype" value="2">
-            <label for="Combination">Combination Skin</label><br>
-            <input type="radio" id="Normal" name="skintype" value="3">
-            <label for="Normal">Normal Skin</label><br>
+            <div class="input-group">
+                <label for=" email">Email :</label>
+                <input type="email" name="email" id="email" required>
             </div>
-            <label for="password">Password</label>
-            <input type="password" name="password" id="password" required>
-            <label for="repassword">Confirm Password</label>
-            <input type="repassword" name="repassword" id="repassword" required>
-            <button type="submit" name="submit" id="button"><a href="home.html">Register</a></button>
+            <div class="input-group">
+                <label for=" username">Username :</label>
+                <input type="text" name="username" id="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password :</label>
+                <input type="password" name="password" id="password" required>
+            </div>
+            <div class="stuff" style="text-align: left;">
+                <label for="skintype">Skintype :</label>
+                <label for="Oily">Oily Skin</label>
+                <input type="radio" id="Oily" name="skintype" value="0">
+                <label for="Dry">Dry Skin</label>
+                <input type="radio" id="Dry" name="skintype" value="1">
+                <label for="Combination">Combination Skin</label>
+                <input type="radio" id="Combination" name="skintype" value="2">
+                <label for="Normal">Normal Skin</label>
+                <input type="radio" id="Normal" name="skintype" value="3"> 
+            </div>
+            
+            <button type="submit" name="submit" id="button"><a href="../LOGIN/login.html" class ="content">Register</a></button>
         </form>
     </div>
     <script src="../js/script.js"></script>
