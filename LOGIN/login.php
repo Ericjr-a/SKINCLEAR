@@ -8,7 +8,7 @@
 <body>
     <div class="container">
         <h1>Login</h1>
-        <form>
+        <form action="../ACTION/login_action.php" method="POST" name="loginForm" id="loginForm">
             <div class="input-group">
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username" required>
@@ -17,7 +17,7 @@
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" required>
             </div>
-            <button type="submit">Login</button>
+            <button type="submit" name="loginButton" id="button">Login</button>
             <p><a href="../LOGIN/register.html">Register Here</a></p>
         </form>
     </div>

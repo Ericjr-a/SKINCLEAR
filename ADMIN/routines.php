@@ -1,3 +1,7 @@
+<?php
+include ('../settings/core.php');
+check_login();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,12 +28,7 @@
     </header>
 
     <div class="main">
-        <div class="box" id="leftbox">
-            <h2><a href="morning.html">Morning </a></h2>
-        </div>
-        <div class="box" id="rightbox">
-            <h2><a href="night.html">Night</a></h2>
-        </div>
+       
     </div>
 
     <footer>

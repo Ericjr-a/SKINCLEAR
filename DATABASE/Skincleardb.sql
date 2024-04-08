@@ -1,84 +1,87 @@
-DROP DATABASE IF EXISTS skinclear;
-CREATE DATABASE skinclear;
-USE skinclear;
+drop database if exists skinclear;
+create database skinclear;
+use skinclear;
 
-CREATE TABLE Users (
-    UserID INT PRIMARY KEY AUTO_INCREMENT,
-    Username VARCHAR(60) NOT NULL,
-    Email VARCHAR(60) UNIQUE CHECK (Email LIKE '%@%'),
-    SkinType VARCHAR(60),
-    Goals VARCHAR(255) 
+CREATE TABLE Users(
+UserID INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+Username VARCHAR(60) NOT NULL,
+Email VARCHAR(60) UNIQUE CHECK(Email LIKE "%@%"),
+Passwd  VARCHAR(255) NOT NULL);
+
+
+CREATE TABLE skinType(
+Sid INT PRIMARY KEY NOT NULL,
+typeName VARCHAR(50) NOT NULL
 );
 
-CREATE TABLE SkinIssues (
-    IssueID INT PRIMARY KEY AUTO_INCREMENT,
-    Name VARCHAR(60),
-    Description VARCHAR(255)
+CREATE TABLE skinRegime(
+RegimeID INT PRIMARY KEY NOT NULL,
+Title VARCHAR(60),
+RoutineDescription VARCHAR(60),
+ForSkinType VARCHAR(60),
+Steps VARCHAR(300));
+
+CREATE TABLE MakeupRoutine(
+MakeupRoutineID INT PRIMARY KEY NOT NULL,
+Title VARCHAR(60),
+Details VARCHAR(60),
+ForSkinType VARCHAR(60),
+Steps VARCHAR(60));
+
+CREATE TABLE MakeupBrands(
+BrandID INT PRIMARY KEY NOT NULL,
+BrandName VARCHAR(60),
+ProductType VARCHAR(60),
+ProductdURL VARCHAR(60),
+ForSkinType VARCHAR(60));
+
+CREATE TABLE ProgressPictures(
+PhotoID INT PRIMARY KEY,
+UserID INT,
+Image blob,
+ImageType VARCHAR(60) CHECK(ImageType in('Before','After')),
+PostDate date,
+FOREIGN KEY (UserID) REFERENCES Users(UserID)
+);
+CREATE TABLE UserRoutine(
+RoutineID INT PRIMARY KEY NOT NULL,
+RegimeID INT,
+UserID INT,
+Duration INT,
+PhotoID INT,
+FOREIGN KEY(RegimeID)REFERENCES skinRegime(RegimeID),
+FOREIGN KEY(UserID)REFERENCES Users(UserID),
+FOREIGN KEY(PhotoID)REFERENCES ProgressPictures(PhotoID)
 );
 
-CREATE TABLE SkinCareRegime (
-    RegimeID INT PRIMARY KEY AUTO_INCREMENT,
-    Title VARCHAR(60),
-    RoutineDescription VARCHAR(255), 
-    ForSkinIssue INT, 
-    Steps VARCHAR(255), 
-    FOREIGN KEY (ForSkinIssue) REFERENCES SkinIssues(IssueID)
-);
+CREATE TABLE UserFeedback(
+FeedbackID INT PRIMARY KEY NOT NULL,
+UserID INT,
+Rating INT,
+Comments VARCHAR(60),
+FOREIGN KEY(UserID)REFERENCES Users(UserID));
 
-CREATE TABLE Dermatologists (
-    DermatologistID INT PRIMARY KEY AUTO_INCREMENT,
-    Name VARCHAR(60),
-    AffiliatedHospital VARCHAR(60),
-    ContactInfo VARCHAR(60)
-);
 
-CREATE TABLE MakeupRoutine (
-    MakeupRoutineID INT PRIMARY KEY AUTO_INCREMENT,
-    Title VARCHAR(60),
-    Details VARCHAR(255), 
-    ForSkinType VARCHAR(60),
-    Steps VARCHAR(255) 
-);
+INSERT INTO skinRegime (RegimeID, Title, RoutineDescription, ForSkinType, Steps) VALUES
+(1, 'Hydration Boost', 'Intensive moisture care for dry skin', 'Dry', '1. Cleansing 2. Hydrating serum 3. Moisturizer'),
+(2, 'Acne Control', 'Routine for managing acne-prone skin', 'Oily', '1. Cleansing 2. Salicylic acid treatment 3.Retinol 4. Oil-free moisturizer'),
+(3, 'Sensitivity Soothe', 'Calm sensitive skin and reduce redness', 'Combination', '1. Mild cleansing 2. Soothing serum 3. Barrier repair cream'),
+(4, 'Anti-Aging Care', 'Routine focused on reducing signs of aging', 'Normal', '1. Cleansing 2. Retinol treatment 3. Moisturizer with SPF'),
+(5, 'Period Cleanser', 'Routine focused on reducing period acne', 'Normal', '1. Cleansing with oil cleanser 2. Toner 2. Hydrating serum 3. Moisturizer'),
+(6, 'Brigtening Routine', 'Routine for brightening skin', 'Oily', '1. Gentle cleansing 2. Vitamin C serum 3. Oil-free moisturizer'),
+(7, 'Exfoliating Routine', 'Routine focused on smoothening skin ', 'Combination', '1. Mild cleansing 2. Exfoliating serum 3. Barrier repair cream'),
+(8, 'Everyday Essential', 'Routine for everyday skin care', 'Normal', '1. Cleansing 2. Toner 3. Moisturizer with SPF 4.Lip Balm');
 
-CREATE TABLE MakeupBrands (
-    BrandID INT PRIMARY KEY AUTO_INCREMENT,
-    BrandName VARCHAR(60),
-    ProductType VARCHAR(60),
-    ProductURL VARCHAR(255), 
-    ForSkinType VARCHAR(60)
-);
 
-CREATE TABLE ProgressPictures (
-    PhotoID INT PRIMARY KEY AUTO_INCREMENT,
-    UserID INT,
-    ImageURL VARCHAR(255), 
-    ImageType VARCHAR(60) CHECK (ImageType IN ('Before', 'After')),
-    PostDate DATE,
-    FOREIGN KEY (UserID) REFERENCES Users(UserID)
-);
+INSERT INTO skinType (Sid, typeName) VALUES
+(1, 'Oily'),
+(2, 'Dry'),
+(3, 'Combination'),
+(4, 'Normal');
 
-CREATE TABLE UserRoutine (
-    RoutineID INT PRIMARY KEY AUTO_INCREMENT,
-    RegimeID INT,
-    UserID INT,
-    Duration INT,
-    PhotoIDBefore INT, 
-    PhotoIDAfter INT,
-    FOREIGN KEY (RegimeID) REFERENCES SkinCareRegime(RegimeID),
-    FOREIGN KEY (UserID) REFERENCES Users(UserID),
-    FOREIGN KEY (PhotoIDBefore) REFERENCES ProgressPictures(PhotoID),
-    FOREIGN KEY (PhotoIDAfter) REFERENCES ProgressPictures(PhotoID)
-);
 
-CREATE TABLE UserFeedback (
-    FeedbackID INT PRIMARY KEY AUTO_INCREMENT,
-    UserID INT,
-    RoutineID INT,
-    MakeupRoutineID INT,
-    Rating INT,
-    Comments VARCHAR(255), 
-    EntryDate DATE,
-    FOREIGN KEY (UserID) REFERENCES Users(UserID),
-    FOREIGN KEY (RoutineID) REFERENCES UserRoutine(RoutineID),
-    FOREIGN KEY (MakeupRoutineID) REFERENCES MakeupRoutine(MakeupRoutineID)
-);
+ALTER TABLE Users
+ADD COLUMN Sid INT;
+  
+  
+  

@@ -185,3 +185,12 @@ a {
 p{
     margin-top: 10px;
 }
+
+.stuff{
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+
+}

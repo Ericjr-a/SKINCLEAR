@@ -1,3 +1,9 @@
+<?php
+include( '../FUNCTIONS/skintype.php');
+
+$skintypes = skintype(); 
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,18 +31,13 @@
                 <label for="password">Password :</label>
                 <input type="password" name="password" id="password" required>
             </div>
-            <div class="stuff" style="text-align: left;">
-                <label for="skintype">Skintype :</label>
-                <label for="Oily">Oily Skin</label>
-                <input type="radio" id="Oily" name="skintype" value="0">
-                <label for="Dry">Dry Skin</label>
-                <input type="radio" id="Dry" name="skintype" value="1">
-                <label for="Combination">Combination Skin</label>
-                <input type="radio" id="Combination" name="skintype" value="2">
-                <label for="Normal">Normal Skin</label>
-                <input type="radio" id="Normal" name="skintype" value="3"> 
+            <div>
+                <select name="skintype" id="skintype" required class="stuff">
+                <?php foreach ($skintypes as $skintype): ?>
+                <option value="<?php echo htmlspecialchars($skintype['fSid']); ?>"><?php echo htmlspecialchars($skintype['typeName']); ?></option>
+                <?php endforeach; ?>
+                </select>
             </div>
-            
             <button type="submit" name="submit" id="button"><a href="../LOGIN/login.html" class ="content">Register</a></button>
         </form>
     </div>

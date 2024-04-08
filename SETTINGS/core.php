@@ -1,3 +1,10 @@
 <?php
 session_start();
+
+function check_login() {
+    if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
+        header("Location: ../LOGIN/login.php");
+        die(); 
+    }
+}
 ?>
