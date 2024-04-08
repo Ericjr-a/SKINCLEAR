@@ -18,7 +18,7 @@
                 <input type="password" id="password" name="password" required>
             </div>
             <button type="submit" name="loginButton" id="button">Login</button>
-            <p><a href="../LOGIN/register.html">Register Here</a></p>
+            <p><a href="../LOGIN/register.php">Register Here</a></p>
         </form>
     </div>
 </body>

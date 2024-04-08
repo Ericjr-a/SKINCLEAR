@@ -1,5 +1,5 @@
 <?php
-define("MY_SERVER", "localhost");
+define("MY_SERVER", "Skinclear");
 define("USERNAME", "root");
 define("PASSWORD", "1QliCnj7Zyh+");
 define("DATABASE", "skinclear");

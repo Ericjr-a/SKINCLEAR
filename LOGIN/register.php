@@ -18,7 +18,7 @@ $skintypes = skintype();
         <h2>Sign up page</h2>
     </header>
     <div class="container">
-        <form action="../action/register_user_action.php" method="POST" name="registerForm" id="registerForm">
+        <form action="../ACTION/register_action.php" method="POST" name="registerForm" id="registerForm">
             <div class="input-group">
                 <label for=" email">Email :</label>
                 <input type="email" name="email" id="email" required>
@@ -34,7 +34,7 @@ $skintypes = skintype();
             <div>
                 <select name="skintype" id="skintype" required class="stuff">
                 <?php foreach ($skintypes as $skintype): ?>
-                <option value="<?php echo htmlspecialchars($skintype['fSid']); ?>"><?php echo htmlspecialchars($skintype['typeName']); ?></option>
+                <option value="<?php echo htmlspecialchars($skintype['Sid']); ?>"><?php echo htmlspecialchars($skintype['typeName']); ?></option>
                 <?php endforeach; ?>
                 </select>
             </div>
