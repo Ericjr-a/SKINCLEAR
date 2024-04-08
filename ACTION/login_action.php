@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['loginButton'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    $query = "SELECT * FROM People WHERE Username = ?";
+    $query = "SELECT * FROM Users WHERE Username = ?";
 
     if ($stmt = $connection->prepare($query)) {
         $stmt->bind_param("s", $username);

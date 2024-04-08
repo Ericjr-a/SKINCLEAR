@@ -1,9 +1,9 @@
 <?php
-include ('../settings/connection.php'); 
+include ('../SETTINGS/connection.php'); 
 
 function skintype(){
     global $connection;
-    $query = "SELECT fSid, typeName FROM SkinType";
+    $query = "SELECT Sid, typeName FROM SkinType";
     $result = $connection->query($query);
 
     if ($result->num_rows > 0) {
