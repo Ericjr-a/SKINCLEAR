@@ -3,7 +3,7 @@ include ('../SETTINGS/connection.php');
 
 function skintype(){
     global $connection;
-    $query = "SELECT Sid, typeName FROM SkinType";
+    $query = "SELECT Sid, typeName FROM skinType";
     $result = $connection->query($query);
 
     if ($result->num_rows > 0) {

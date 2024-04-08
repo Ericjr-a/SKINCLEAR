@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
     $passwordHash = password_hash($password, PASSWORD_DEFAULT);
 
 
-    $query = $connection->prepare("INSERT INTO Users ( Username, Email, Passwd, Sid) VALUES (?, ?, ?, ?, ?)");
+    $query = $connection->prepare("INSERT INTO Users ( Username, Email, Passwd, SkinTypeID) VALUES (?, ?, ?, ?, ?)");
     $query->bind_param('isss',$username, $email, $passwordHash, $skintype);
 
     if ($query->execute()) {

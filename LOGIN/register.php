@@ -38,7 +38,7 @@ $skintypes = skintype();
                 <?php endforeach; ?>
                 </select>
             </div>
-            <button type="submit" name="submit" id="button"><a href="../LOGIN/login.html" class ="content">Register</a></button>
+            <button type="submit" name="submit" id="button">Register</button>
         </form>
     </div>
     <script src="../js/script.js"></script>
