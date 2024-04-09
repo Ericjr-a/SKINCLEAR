@@ -15,7 +15,7 @@ include('../SETTINGS/connection.php');
         </div>
         <nav>
             <ul>
-                <li><a href="routines.php">Skin Care Routines</a></li>
+                <li><a href="routines.html">Skin Care Routines</a></li>
                 <li><a href="resource.html">Resources</a></li>
                 <li><a href="makeup.html">Makeup Routines</a></li>
                 <li><a href="user.html">User Profile</a></li>
@@ -25,21 +25,22 @@ include('../SETTINGS/connection.php');
         </nav>
 </header>
 <div class='main_content'>
-<p>Morning Routine</p>
+<p>Select Your Skin Care Routine</p>
 </div>
 
 <?php 
-    include '../FUNCTIONS/morn_fxn.php'; 
+    include '../FUNCTIONS/routine_fxn.php'; 
     if(!empty($var_data)): ?>
     <div class="routines-container">
     <?php foreach ($var_data as $routine): ?>
     <div class="routine-box">
-    <div class="routine-title"><?php echo htmlspecialchars($routine['Title']); ?></div>
-    <br/>
-    <div class="routine-desc"><?php echo nl2br(htmlspecialchars($routine['RoutineDescription'])); ?></div>
-    <br/>
-    <div class="routine-steps"><?php echo nl2br(htmlspecialchars($routine['Steps'])); ?></div>
-    <br/>
+        <div class="routine-title"><?php echo htmlspecialchars($routine['Title']); ?></div>
+        <br/>
+        <div class="routine-desc"><?php echo nl2br(htmlspecialchars($routine['RoutineDescription'])); ?></div>
+        <br/>
+        <div class="routine-steps"><?php echo nl2br(htmlspecialchars($routine['Steps'])); ?></div>
+        <br/>
+        <button onclick="addToRoutine(<?php echo $routine['RegimeID']; ?>)">Add to Routine</button>
     </div>
     <?php endforeach; ?>
     </div>

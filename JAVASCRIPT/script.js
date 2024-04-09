@@ -21,4 +21,6 @@ button.addEventListener("click", function(e) {
         email.style.borderColor= "green";
         password.style.borderColor="green";
     }
-})
+}
+
+)

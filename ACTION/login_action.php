@@ -19,9 +19,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['loginButton'])) {
         if ($result->num_rows > 0) {
             $user = $result->fetch_assoc();
 
-            if (password_verify($password, $user['passwd'])) {
+            if (password_verify($password, $user['Passwd'])) {
                 session_regenerate_id();
                 $_SESSION['loggedin'] = true;
+                $_SESSION['username'] = $username;
                 $_SESSION['id'] = $user['UserID'];
                 header("Location: ../ADMIN/home.php");
                 exit;

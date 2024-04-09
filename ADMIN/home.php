@@ -13,9 +13,9 @@
         </div>
         <nav>
             <ul>
-            <li><a href="routines.html">Skin Care Routines</a></li>
-                <li><a href="dermatologists.html">Resources</a></li>
-                <li><a href="feedback.html">Progress</a></li>
+            <li><a href="routines.php">Skin Care Routines</a></li>
+                <li><a href="resource.html">Resources</a></li>
+                <li><a href="feedback.php">Feedback</a></li>
                 <li><a href="makeup.html">Makeup Routines</a></li>
                 <li><a href="user.html">User Profile</a></li>
             </ul>
@@ -24,18 +24,27 @@
     </header>
 
     <div class="main">
-        <div class="box" id="leftbox">
-            <h2><a href="../ADMIN/morning.php">Morning </a></h2>
-        </div>
-        <div class="box" id="rightbox">
-            <h2><a href="../ADMIN/night.php">Night</a></h2>
-        </div>
+        <div class="box" id="leftbox"> 
+            <a href="../ADMIN/morning.php">
+            </a>
+        </div> 
+        <div class="box" id="rightbox"> 
+            <a href="../ADMIN/night.php">
+            </a>
+        </div> 
     </div>
 
     <footer>
         <p>&copy; 2024 SkinClear. All rights reserved.</p>
-    </footer>
-
+</footer>
 
 </body>
+
+<script>
+    const myDiv = document.getElementById('myDiv');
+    myDiv.addEventListener('click', function() {
+    window.location.href = '../ADMIN/morning.php'; 
+    });
+
+</script>
 </html>

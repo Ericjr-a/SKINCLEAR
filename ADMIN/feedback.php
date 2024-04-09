@@ -22,9 +22,11 @@
         <nav>
             <ul>
                 <li><a href="routines.html">Skin Care Routines</a></li>
-                <li><a href="dermatologists.html">Dermatologists</a></li>
+                <li><a href="resource.html">Resources</a></li>
                 <li><a href="makeup.html">Makeup Routines</a></li>
                 <li><a href="user.html">User Profile</a></li>
+                <li><a href="home.php">Home</a></li>
+
             </ul>
         </nav>
 
@@ -33,15 +35,13 @@
     <p> KINDLY SHARE YOUR FEEDBACK AND ANY COMMENTS TO HELP US IMPROVE</p>
     </div>
     <div>
-        <form action="get_feedback.php" method="POST" name="feedback" id="feedback" >
+        <form action="../ACTION/get_feedback.php" method="POST" name="feedback" id="feedback" class="form_class" >
             <div class="input_box">
-                <input type="text" placeholder="Email">
-            </div>
+                <input type="text" placeholder="Email" name="email"> </div>
             <div class="input_box">
-                <textarea name="" id="message" cols="50" rows="10"></textarea>
-            </div>
+                <textarea name="comments" id="message" cols="50" rows="10"></textarea> </div>
             <button type="submit" id="button" name="submit" class="btn">Done</button> 
-        </form>   
+        </form> 
     </div>
  
 

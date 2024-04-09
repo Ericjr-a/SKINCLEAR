@@ -1,5 +1,5 @@
 <?php
-include ('../SETTINGS/connection.php'); 
+include('../SETTINGS/connection.php'); 
 
 function skintype(){
     global $connection;
@@ -14,5 +14,4 @@ function skintype(){
         return [];
     }
 }
-
 ?>

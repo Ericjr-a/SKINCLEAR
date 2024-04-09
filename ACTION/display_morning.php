@@ -1,8 +1,8 @@
 <?php
 include('../settings/connection.php');
-function getAllRoutines() {
+function getMornRoutines() {
     global $connection;
-    $query = "SELECT RegimeID, Title, RoutineDescription, Steps FROM skinRegime";
+    $query = "SELECT MornID, RegimeID, Title, RoutineDescription, Steps FROM MornRegime";
     $result = $connection->query($query);
 
     if ($result) {

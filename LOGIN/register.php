@@ -1,8 +1,7 @@
 <?php
-include( '../FUNCTIONS/skintype.php');
+include( '../../SKINCLEAR/FUNCTIONS/skintype.php');
 
 $skintypes = skintype(); 
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,6 +31,7 @@ $skintypes = skintype();
                 <input type="password" name="password" id="password" required>
             </div>
             <div>
+                <label for="skintype">Skin type:</label>
                 <select name="skintype" id="skintype" required class="stuff">
                 <?php foreach ($skintypes as $skintype): ?>
                 <option value="<?php echo htmlspecialchars($skintype['Sid']); ?>"><?php echo htmlspecialchars($skintype['typeName']); ?></option>

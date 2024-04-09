@@ -1,5 +1,5 @@
 <?php
-include('SETTINGS/connection.php');
+include('../SETTINGS/connection.php');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
     $email = $_POST["email"];
@@ -10,6 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
 
     if ($query->execute()) {
         echo "Feedback submitted successfully.";
+        header("Location: ../ADMIN/feedback.php");
     } else {
         echo "Error: " . $query->error;
     }

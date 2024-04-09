@@ -56,10 +56,8 @@ FOREIGN KEY(PhotoID)REFERENCES ProgressPictures(PhotoID)
 
 CREATE TABLE UserFeedback(
 FeedbackID INT PRIMARY KEY NOT NULL,
-UserID INT,
-Rating INT,
-Comments VARCHAR(60),
-FOREIGN KEY(UserID)REFERENCES Users(UserID));
+Email VARCHAR(60) UNIQUE CHECK(Email LIKE "%@%"),
+Comments VARCHAR(300));
 
 
 INSERT INTO skinRegime (RegimeID, Title, RoutineDescription, ForSkinType, Steps) VALUES
@@ -79,9 +77,10 @@ INSERT INTO skinType (Sid, typeName) VALUES
 (3, 'Combination'),
 (4, 'Normal');
 
+ALTER TABLE Users ADD COLUMN SkinTypeID INT;
 
-ALTER TABLE Users
-ADD COLUMN Sid INT;
-  
+ALTER TABLE Users ADD CONSTRAINT fk_skinType FOREIGN KEY (SkinTypeID) REFERENCES skinType(Sid);
+
+
   
   

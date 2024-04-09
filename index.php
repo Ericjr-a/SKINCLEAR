@@ -9,7 +9,7 @@
         margin: 0;
         padding: 0;
         font-family: Arial, sans-serif;
-        background-image: url('../VIEW/images/SKIN.jpg'); 
+        background-image: url('../../SKINCLEAR/VIEW/images/SKIN.jpg'); 
         background-size: cover;
         background-position: center;
         height: 100vh;
@@ -45,8 +45,8 @@
 </head>
 <body>
 <div class="container">
-    <button onclick="location.href='../LOGIN/login.php'">Login</button>
-    <button onclick="location.href='../LOGIN/register.php'">Register</button>
+    <button onclick="location.href='../../SKINCLEAR/LOGIN/login.php'">Login</button>
+    <button onclick="location.href='../../SKINCLEAR/LOGIN/register.php'">Register</button>
 </div>
 </body>
 </html>
