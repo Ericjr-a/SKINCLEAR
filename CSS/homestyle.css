@@ -79,17 +79,21 @@ nav ul li a {
 }
 
 #leftbox {
-    background-image: url('../VIEW/images/SKIN.jpg');
+    background-image: url('../VIEW/images/IMG_1039.JPG');
     float: left;
     width: 100%;
     height: 500px;
 }
 
 #rightbox {
-    background-image: url('../VIEW/images/SKIN.jpg');
+    background-image: url('../VIEW/images/IMG_1041 2.JPG');
     float: right;
     width: 100%;
     height: 500px;
+  
+}
+#rightbox a{
+    color: white;
 }
 
 footer {
@@ -109,10 +113,58 @@ a {
     
 }
 
+
+
+.main_content {
+    width:100%;
+    margin-bottom: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 40px;
+    background-color: whitesmoke;
+    position: absolute;
+}
+
+p{
+    text-align: center;
+}
+
+input[type="text"] {
+    width: 28vw;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
 form {
-    max-width: 600px; 
-    background-color: black; 
-    padding: 20px;
-    border-radius: 6px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    max-width: 100%;
+    background-color: whitesmoke;
+    padding: 100px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-right: auto; 
+    margin-left: auto; 
+    width: 80%; 
+    margin-top: 40px;
+}
+
+.input_box {
+    margin-bottom: 10px;
+}
+
+button{
+    width: 100%;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.message{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 10px;
 }

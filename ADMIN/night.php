@@ -13,9 +13,9 @@
         </div>
         <nav>
             <ul>
-                <li><a href="routines.html">Skin Care Routines</a></li>
-                <li><a href="dermatologists.html">Dermatologists</a></li>
-                <li><a href="feedback.html">Goals</a></li>
+            <li><a href="routines.html">Skin Care Routines</a></li>
+                <li><a href="dermatologists.html">Resources</a></li>
+                <li><a href="feedback.html">Progress</a></li>
                 <li><a href="makeup.html">Makeup Routines</a></li>
                 <li><a href="user.html">User Profile</a></li>
             </ul>

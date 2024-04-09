@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SkinClear </title>
     <link rel="stylesheet" href="../CSS/homestyle.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-    .checked {
-    color: orange;
-    }
+        body{
+            background-image: url("../VIEW/images/images.jpeg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
     </style>
 </head>
 <body>
@@ -28,32 +30,20 @@
 
     </header>
     <div class = 'main_content'>
-    <p>Hi User, Kindly Inform us on your experience with SkinClear</p>
-    <div class ="submit_form">
-        <form action="">
+    <p> KINDLY SHARE YOUR FEEDBACK AND ANY COMMENTS TO HELP US IMPROVE</p>
+    </div>
+    <div>
+        <form action="get_feedback.php" method="POST" name="feedback" id="feedback" >
             <div class="input_box">
-            <label for="familyName">Select Family Role:</label>
-            <select name="familyName" id="familyName">
-            </div>
-            <div >
-                <h2>Rating SkinCare Routine</h2>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star"></span>
-                <span class="fa fa-star"></span>
+                <input type="text" placeholder="Email">
             </div>
             <div class="input_box">
-                <textarea name="" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+                <textarea name="" id="message" cols="50" rows="10"></textarea>
             </div>
             <button type="submit" id="button" name="submit" class="btn">Done</button> 
         </form>   
     </div>
-    </div>
-
-    <footer>
-        <p>&copy; 2024 SkinClear. All rights reserved.</p>
-    </footer>
+ 
 
 
 </body>

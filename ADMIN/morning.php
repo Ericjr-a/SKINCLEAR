@@ -1,7 +1,3 @@
-<?php
-include ('../settings/core.php');
-check_login();
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,23 +14,19 @@ check_login();
         <nav>
             <ul>
                 <li><a href="routines.html">Skin Care Routines</a></li>
-                <li><a href="dermatologists.html">Dermatologists</a></li>
-                <li><a href="feedback.html">Goals</a></li>
+                <li><a href="dermatologists.html">Resources</a></li>
+                <li><a href="feedback.html">Progress</a></li>
                 <li><a href="makeup.html">Makeup Routines</a></li>
                 <li><a href="user.html">User Profile</a></li>
             </ul>
         </nav>
 
     </header>
+    
 
-    <div class="main">
+    <main>
        
-    </div>
-
-    <footer>
-        <p>&copy; 2024 SkinClear. All rights reserved.</p>
-    </footer>
-
+    </main>
 
 </body>
 </html>
