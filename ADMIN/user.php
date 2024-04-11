@@ -31,20 +31,30 @@
         </nav>
 
     </header>
-    <div class = 'main_content'>
-    <p> KINDLY SHARE YOUR FEEDBACK AND ANY COMMENTS TO HELP US IMPROVE</p>
-    </div>
-    <div>
-        <form action="../ACTION/get_feedback.php" method="POST" name="feedback" id="feedback" class="form_class" >
-            <div class="input_box">
-                <input type="text" placeholder="Email" name="email"> </div>
-            <div class="input_box">
-                <textarea name="comments" id="message" cols="50" rows="10"></textarea> </div>
-            <button type="submit" id="button" name="submit" class="btn">Done</button> 
-        </form> 
-    </div>
- 
+    <form method="POST" action="../ACTION/change_username.php">
+        <label for="username">Change Username:</label>
+        <input type="text" id="username" name="username" required>
+        <button type="submit">Update Username</button>
+    </form>
 
+    <form method="POST" action="../ACTION/add_goal.php">
+        <label for="goal">Add New Goal:</label>
+        <input type="text" id="goal" name="goal" required>
+        <button type="submit">Add Goal</button>
+    </form>
+
+    <h3>Your Goals</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Goal</th>
+                <th>Date Added</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php include '..ACTION/get_goals.php'; ?>
+        </tbody>
+    </table>
 
 </body>
 </html>

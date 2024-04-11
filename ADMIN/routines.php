@@ -16,11 +16,11 @@ include('../SETTINGS/connection.php');
         <nav>
             <ul>
                 <li><a href="routines.php">Skin Care Routines</a></li>
-                <li><a href="resource.html">Resources</a></li>
-                <li><a href="makeup.html">Makeup Routines</a></li>
-                <li><a href="user.html">User Profile</a></li>
+                <li><a href="resource.php">Resources</a></li>
+                <li><a href="feedback.php">Feedback</a></li>
+                <li><a href="makeup.php">Makeup Routines</a></li>
+                <li><a href="user.php">User Profile</a></li>
                 <li><a href="home.php">Home</a></li>
-
             </ul>
         </nav>
 </header>
@@ -57,11 +57,5 @@ include('../SETTINGS/connection.php');
 <?php else: ?>
     <p>No routines found.</p>
 <?php endif; ?>
-<script>
-function addToRoutine(regimeID) {
-    console.log("Adding RegimeID " + regimeID + " to routine. Implement this functionality as needed.");
-}
-</script>
-
 </body>
 </html>

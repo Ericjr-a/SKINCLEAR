@@ -15,43 +15,37 @@ include('../SETTINGS/connection.php');
         </div>
         <nav>
             <ul>
-                <li><a href="routines.html">Skin Care Routines</a></li>
-                <li><a href="resource.html">Resources</a></li>
-                <li><a href="makeup.html">Makeup Routines</a></li>
-                <li><a href="user.html">User Profile</a></li>
+                <li><a href="routines.php">Skin Care Routines</a></li>
+                <li><a href="resource.php">Resources</a></li>
+                <li><a href="feedback.php">Feedback</a></li>
+                <li><a href="makeup.php">Makeup Routines</a></li>
+                <li><a href="user.php">User Profile</a></li>
                 <li><a href="home.php">Home</a></li>
-
             </ul>
         </nav>
 </header>
 <div class='main_content'>
-<p>Select Your Skin Care Routine</p>
+<p>Browse through our diverse makeup routines</p>
 </div>
 
 <?php 
-    include '../FUNCTIONS/routine_fxn.php'; 
+    include '../FUNCTIONS/makeup_fxn.php'; 
     if(!empty($var_data)): ?>
     <div class="routines-container">
     <?php foreach ($var_data as $routine): ?>
     <div class="routine-box">
         <div class="routine-title"><?php echo htmlspecialchars($routine['Title']); ?></div>
         <br/>
-        <div class="routine-desc"><?php echo nl2br(htmlspecialchars($routine['RoutineDescription'])); ?></div>
+        <div class="routine-desc"><?php echo nl2br(htmlspecialchars($routine['Details'])); ?></div>
         <br/>
         <div class="routine-steps"><?php echo nl2br(htmlspecialchars($routine['Steps'])); ?></div>
         <br/>
-        <button onclick="addToRoutine(<?php echo $routine['RegimeID']; ?>)">Add to Routine</button>
     </div>
     <?php endforeach; ?>
     </div>
 <?php else: ?>
     <p>No routines found.</p>
 <?php endif; ?>
-<script>
-function addToRoutine(regimeID) {
-    console.log("Adding RegimeID " + regimeID + " to routine. Implement this functionality as needed.");
-}
-</script>
 
 </body>
 </html>

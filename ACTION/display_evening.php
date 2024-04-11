@@ -1,5 +1,5 @@
 <?php
-include('../settings/connection.php');
+include '../SETTINGS/connection.php'; 
 function getNightRoutines() {
     global $connection;
     $query = "SELECT EveningID, RegimeID, Title, RoutineDescription, Steps FROM EveningRegime";

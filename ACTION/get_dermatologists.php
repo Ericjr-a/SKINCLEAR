@@ -1,8 +1,8 @@
 <?php
 include '../SETTINGS/connection.php'; 
-function getAllRoutines() {
+function getAllDermatologists() {
     global $connection;
-    $query = "SELECT RegimeID, Title, RoutineDescription, Steps FROM skinRegime";
+    $query = "SELECT DermatologistID, DName, HospitalAffiliation, ContactInfo FROM Dermatologists";
     $result = $connection->query($query);
 
     if ($result) {

@@ -1,8 +1,8 @@
 <?php
-include '../SETTINGS/connection.php'; 
-function getAllRoutines() {
+include('../SETTINGS/connection.php');
+function getAllMakeupBrands() {
     global $connection;
-    $query = "SELECT RegimeID, Title, RoutineDescription, Steps FROM skinRegime";
+    $query = "SELECT BrandID, BrandName, ProductType, ProductURL FROM MakeupBrands";
     $result = $connection->query($query);
 
     if ($result) {

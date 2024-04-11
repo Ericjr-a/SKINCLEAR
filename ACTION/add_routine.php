@@ -1,5 +1,5 @@
 <?php
-include '../settings/connection.php'; 
+include '../SETTINGS/connection.php'; 
 
 if(isset($_POST['action'])) {
     $regimeID = $_POST['regimeID'];

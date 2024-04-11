@@ -16,11 +16,11 @@ include('../SETTINGS/connection.php');
         <nav>
             <ul>
                 <li><a href="routines.php">Skin Care Routines</a></li>
-                <li><a href="resource.html">Resources</a></li>
-                <li><a href="makeup.html">Makeup Routines</a></li>
-                <li><a href="user.html">User Profile</a></li>
+                <li><a href="resource.php">Resources</a></li>
+                <li><a href="feedback.php">Feedback</a></li>
+                <li><a href="makeup.php">Makeup Routines</a></li>
+                <li><a href="user.php">User Profile</a></li>
                 <li><a href="home.php">Home</a></li>
-
             </ul>
         </nav>
 </header>
@@ -34,23 +34,20 @@ include('../SETTINGS/connection.php');
     <div class="routines-container">
     <?php foreach ($var_data as $routine): ?>
     <div class="routine-box">
+    <form method="POST" action="../ACTION/delete_morn_routine.php">
     <div class="routine-title"><?php echo htmlspecialchars($routine['Title']); ?></div>
     <br/>
     <div class="routine-desc"><?php echo nl2br(htmlspecialchars($routine['RoutineDescription'])); ?></div>
     <br/>
     <div class="routine-steps"><?php echo nl2br(htmlspecialchars($routine['Steps'])); ?></div>
     <br/>
+    <a href="../action/delete_morn_routine.php?id=<?php echo $routine['MornID']; ?>" onclick="return confirm('Are you sure you want to delete this routine?');">Delete Routine</a>
     </div>
     <?php endforeach; ?>
     </div>
 <?php else: ?>
     <p>No routines found.</p>
 <?php endif; ?>
-<script>
-function addToRoutine(regimeID) {
-    console.log("Adding RegimeID " + regimeID + " to routine. Implement this functionality as needed.");
-}
-</script>
 
 </body>
 </html>

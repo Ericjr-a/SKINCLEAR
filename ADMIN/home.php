@@ -13,11 +13,11 @@
         </div>
         <nav>
             <ul>
-            <li><a href="routines.php">Skin Care Routines</a></li>
-                <li><a href="resource.html">Resources</a></li>
+                <li><a href="routines.php">Skin Care Routines</a></li>
+                <li><a href="resource.php">Resources</a></li>
                 <li><a href="feedback.php">Feedback</a></li>
-                <li><a href="makeup.html">Makeup Routines</a></li>
-                <li><a href="user.html">User Profile</a></li>
+                <li><a href="makeup.php">Makeup Routines</a></li>
+                <li><a href="user.php">User Profile</a></li>
             </ul>
         </nav>
 
@@ -39,12 +39,4 @@
 </footer>
 
 </body>
-
-<script>
-    const myDiv = document.getElementById('myDiv');
-    myDiv.addEventListener('click', function() {
-    window.location.href = '../ADMIN/morning.php'; 
-    });
-
-</script>
 </html>

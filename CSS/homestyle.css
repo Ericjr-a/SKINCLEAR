@@ -182,7 +182,7 @@ button{
     background-color: #f0f0f0; 
 } 
 
-.routine-box {
+.routine-box, .derm-box, .brand-box {
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 10px;
@@ -210,7 +210,7 @@ button{
     padding-bottom: 100px;
 }
 
-.routines-container {
+.routines-container{
     display: flex;
     flex-wrap: wrap; 
     max-height: 500px; 
@@ -219,4 +219,39 @@ button{
     margin: 10px;
 }
 
+.content-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dermatologists, .makeup-brands {
+    width: 50%;
+    padding: 20px; 
+}
+
+.derm-box, .brand-box {
+    margin-bottom: 50px; 
+    border: 1px solid #ccc; 
+    padding: 10px; 
+}
+
+@media (max-width: 768px) {
+    .content-container {
+        flex-direction: column;
+    }
+    .dermatologists, .makeup-brands {
+        width: 100%;
+    }
+}
+
+.derm-container, .brand-container {
+    display: flex;
+    flex-wrap: wrap; 
+    max-height: 500px; 
+    overflow-y: auto; 
+    gap: 15px; 
+    margin: 10px;
+    margin-top: 40px;
+
+}
   
