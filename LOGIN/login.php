@@ -26,5 +26,6 @@ error_reporting(E_ALL);
             <p><a href="../LOGIN/register.php">Register Here</a></p>
         </form>
     </div>
+    <script src="../js/script.js"></script>
 </body>
 </html>

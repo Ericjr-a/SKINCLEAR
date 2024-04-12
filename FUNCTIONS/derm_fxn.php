@@ -1,5 +1,5 @@
 <?php
-include('../action/get_dermatologists.php'); 
+include('../ACTION/get_dermatologists.php'); 
 
 $var_data = getAllDermatologists();
 

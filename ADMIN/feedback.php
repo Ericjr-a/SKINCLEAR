@@ -17,7 +17,7 @@
 <body>
     <header>
         <div class="logo">
-            <a href="../css/homestyle.css"><img src="../CSS/images/SKIN.jpg" class="logo" width="70px" height="70px"></a> 
+            <a href="../CSS/homestyle.css"><img src="../CSS/images/SKIN.jpg" class="logo" width="70px" height="70px"></a> 
         </div>
         <nav>
             <ul>

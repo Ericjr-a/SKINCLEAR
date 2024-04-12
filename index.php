@@ -45,8 +45,8 @@
 </head>
 <body>
 <div class="container">
-    <button onclick="location.href='../../SKINCLEAR/LOGIN/login.php'">Login</button>
-    <button onclick="location.href='../../SKINCLEAR/LOGIN/register.php'">Register</button>
+    <button onclick="location.href='../LOGIN/login.php'">Login</button>
+    <button onclick="location.href='../LOGIN/register.php'">Register</button>
 </div>
 </body>
 </html>
