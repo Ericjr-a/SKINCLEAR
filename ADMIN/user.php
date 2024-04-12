@@ -47,21 +47,17 @@
     <form method="POST" action="../ACTION/add_goal.php" class = "form_content">
         <label for="goal">Add New Goal:</label>
         <input type="text" id="goal" name="goal" required>
-        <label for="dob">Date</label>
-        <input type="date" placeholder="Date" name="date" id="date" required>
         <button type="submit">Add Goal</button>
     </form>
-    <a href="../LOGIN/logout.php">Logout</a>
+    <a href="../LOGIN/logout.php" class = "a_button">Logout</a>
     </div>
     </div>
-   
 
     <table>
         <thead>
             <tr>
                 <th>Goal Number</th>
                 <th>Goals</th>
-                <th>Date Added</th>
                 <th>Achieved</th>
             </tr>
         </thead>
@@ -73,7 +69,6 @@
                 echo "<tr>";
                 echo "<td>" . htmlspecialchars($goal['GoalID']) . "</td>";
                 echo "<td>" . htmlspecialchars($goal['goal']) . "</td>";
-                echo "<td>" . htmlspecialchars($goal['date_added']) . "</td>";
                 echo "<td>";
                 echo "<a href='../ACTION/achieved.php?id=" . htmlspecialchars($goal['GoalID']) . "' class='achieve-icon'><i class='fas fa-check-square'></i></a>";
                 echo "</td>";
@@ -81,7 +76,7 @@
 
             }
         } else {
-            echo "<tr><td colspan='4'>No goals found</td></tr>";
+            echo "<tr><td colspan='3'>No goals found</td></tr>";
         }
         ?>
         </tbody>

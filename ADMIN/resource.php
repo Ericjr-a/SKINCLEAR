@@ -36,11 +36,11 @@ include('../SETTINGS/connection.php');
     <div class="derm-container"> 
     <?php foreach ($var_data as $derm): ?>
     <div class="derm-box">
-        <div class="derm-title"><?php echo htmlspecialchars($derm['DName']); ?></div>
+        <div class="routine-title"><?php echo htmlspecialchars($derm['DName']); ?></div>
         <br/>
-        <div class="derm-desc"><?php echo nl2br(htmlspecialchars($derm['HospitalAffiliation'])); ?></div>
+        <div class="routine-desc"><?php echo nl2br(htmlspecialchars($derm['HospitalAffiliation'])); ?></div>
         <br/>
-        <div class="derm-steps"><?php echo nl2br(htmlspecialchars($derm['ContactInfo'])); ?></div>
+        <div class="routine-steps"><?php echo nl2br(htmlspecialchars($derm['ContactInfo'])); ?></div>
         <br/>
     </div>
     <?php endforeach; ?>
@@ -57,11 +57,11 @@ include('../SETTINGS/connection.php');
     <div class="brand-container">
     <?php foreach ($var_data as $brand): ?>
     <div class="brand-box">
-        <div class="brand-title"><?php echo htmlspecialchars($brand['BrandName']); ?></div>
+        <div class="routine-title"><?php echo htmlspecialchars($brand['BrandName']); ?></div>
         <br/>
-        <div class="brand-desc"><?php echo nl2br(htmlspecialchars($brand['ProductType'])); ?></div>
+        <div class="routine-desc"><?php echo nl2br(htmlspecialchars($brand['ProductType'])); ?></div>
         <br/>
-        <div class="brand-steps"><?php echo nl2br(htmlspecialchars($brand['ProductURL'])); ?></div>
+        <div class="routine-steps"><?php echo nl2br(htmlspecialchars($brand['ProductURL'])); ?></div>
         <br/>
     </div>
     <?php endforeach; ?>

@@ -11,6 +11,7 @@
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
+            font-family:'Times New Roman';
         }
     </style>
 </head>

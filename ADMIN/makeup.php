@@ -45,8 +45,6 @@ if (isset($_SESSION['id'])) {
         <br/>
         <div class="routine-steps"><?php echo nl2br(htmlspecialchars($routine['Steps'])); ?></div>
         <br/>
-        <div class="routine-url"><?php echo nl2br(htmlspecialchars($routine['MakeupURL'])); ?></div>
-        <br/>
     </div>
     <?php endforeach; ?>
     </div>
