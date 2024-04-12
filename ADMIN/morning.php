@@ -11,7 +11,7 @@ include('../SETTINGS/connection.php');
 <body>
 <header>
         <div class="logo">
-            <a href="../css/homestyle.css"><img src="../VIEW/images/SKIN.jpg" class="logo" width="70px" height="70px"></a> 
+            <a href="../css/homestyle.css"><img src="../CSS/images/SKIN.jpg" class="logo" width="70px" height="70px"></a> 
         </div>
         <nav>
             <ul>
@@ -34,14 +34,13 @@ include('../SETTINGS/connection.php');
     <div class="routines-container">
     <?php foreach ($var_data as $routine): ?>
     <div class="routine-box">
-    <form method="POST" action="../ACTION/delete_morn_routine.php">
     <div class="routine-title"><?php echo htmlspecialchars($routine['Title']); ?></div>
     <br/>
     <div class="routine-desc"><?php echo nl2br(htmlspecialchars($routine['RoutineDescription'])); ?></div>
     <br/>
     <div class="routine-steps"><?php echo nl2br(htmlspecialchars($routine['Steps'])); ?></div>
     <br/>
-    <a href="../action/delete_morn_routine.php?id=<?php echo $routine['MornID']; ?>" onclick="return confirm('Are you sure you want to delete this routine?');">Delete Routine</a>
+    <a href="../ACTION/delete_morn_routine.php?id=<?php echo $routine['MornID']; ?>">Delete Routine</a>
     </div>
     <?php endforeach; ?>
     </div>

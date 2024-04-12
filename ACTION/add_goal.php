@@ -5,17 +5,20 @@ include '../SETTINGS/connection.php';
 if (isset($_POST['goal'])) {
     $goal = $_POST['goal'];
     $userId = $_SESSION['id'];
+    $date = $_SESSION['date'];
 
-    $query = "INSERT INTO UserGoals (UserID, goal) VALUES (?, ?)";
-    $stmt = $conn->prepare($query);
-    $stmt->bind_param('is', $userId, $goal);
+    $query = "INSERT INTO UserGoals (UserID, goal, date_added) VALUES (?, ?, ?)";
+    $stmt = $connection->prepare($query);
+    $stmt->bind_param('iss', $userId, $goal, $date);
     
     if ($stmt->execute()) {
         echo "Goal added successfully.";
+        header("Location: ../ADMIN/user.php");
     } else {
-        echo "An error occurred: " . $conn->error;
+        echo "An error occurred: " . $connection->error;
     }
     $stmt->close();
-    $conn->close();
+    $connection->close();
 }
 ?>
+

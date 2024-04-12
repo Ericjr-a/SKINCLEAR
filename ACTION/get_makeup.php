@@ -1,11 +1,18 @@
 <?php
 include '../SETTINGS/connection.php'; 
-function getAllMakeup() {
+function getAllMakeup($userID) { 
     global $connection;
-    $query = "SELECT MakeupRoutineID, Title, Details, Steps FROM MakeupRoutine";
-    $result = $connection->query($query);
+    $userID=$_SESSION['id'];
+    $query = "SELECT MakeupRoutine.MakeupRoutineID, MakeupRoutine.Title, MakeupRoutine.Details, MakeupRoutine.Steps, MakeupRoutine.MakeupURL
+    FROM MakeupRoutine
+    JOIN Users ON MakeupRoutine.ForSkinType = Users.SkinTypeID
+    WHERE Users.UserID = ?;"; 
 
-    if ($result) {
+    $stmt = $connection->prepare($query); 
+    $stmt->bind_param("i", $userID); 
+
+    if ($stmt->execute()) { 
+        $result = $stmt->get_result();
         if ($result->num_rows > 0) {
             $routine = $result->fetch_all(MYSQLI_ASSOC);
             return $routine;
@@ -17,5 +24,7 @@ function getAllMakeup() {
         return false; 
     }
 }
+?>
+
 
 ?>

@@ -11,7 +11,7 @@ include('../SETTINGS/connection.php');
 <body>
 <header>
         <div class="logo">
-            <a href="../css/homestyle.css"><img src="../VIEW/images/SKIN.jpg" class="logo" width="70px" height="70px"></a> 
+            <a href="../css/homestyle.css"><img src="../CSS/images/SKIN.jpg" class="logo" width="70px" height="70px"></a> 
         </div>
         <nav>
             <ul>
@@ -40,7 +40,7 @@ include('../SETTINGS/connection.php');
     <br/>
     <div class="routine-steps"><?php echo nl2br(htmlspecialchars($routine['Steps'])); ?></div>
     <br/>
-    <a href="../action/delete_night_routine.php?id=<?php echo $routine['EveningID']; ?>" onclick="return confirm('Are you sure you want to delete this routine?');">Delete Routine</a>
+    <a href="../action/delete_night_routine.php?id=<?php echo $routine['EveningID']; ?>">Delete Routine</a>
     </div>
     <?php endforeach; ?>
     </div>

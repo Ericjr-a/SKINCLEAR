@@ -40,6 +40,7 @@ $skintypes = skintype();
             </div>
             <button type="submit" name="submit" id="button">Register</button>
         </form>
+        <p><a href="../LOGIN/login.php">Back to Login</a></p>
     </div>
     <script src="../js/script.js"></script>
 </body>

@@ -1,18 +1,24 @@
 <?php
-include '../SETTINGS/connection.php'; 
+include '../SETTINGS/connection.php';
+session_start(); 
 
-$userId = $_SESSION['id']; 
+function getAllGoals() {
+    global $connection;
+    $userId = $_SESSION['id'];
+    $query = "SELECT GoalID, goal, date_added FROM UserGoals WHERE UserID = $userId";
 
-$query = "SELECT goal, date_added FROM UserGoals WHERE UserID = ?";
-$stmt = $conn->prepare($query);
-$stmt->bind_param('i', $userId);
-$stmt->execute();
-$result = $stmt->get_result();
+    $result = $connection->query($query);
 
-while ($row = $result->fetch_assoc()) {
-    echo "<tr><td>" . htmlspecialchars($row['goal']) . "</td><td>" . $row['date_added'] . "</td></tr>";
+    if ($result) {
+        if ($result->num_rows > 0) {
+            $goals = $result->fetch_all(MYSQLI_ASSOC);
+            return $goals;
+        } else {
+            return []; 
+        }
+    } else {
+        echo "Error: " . $connection->error;
+        return false; 
+    }
 }
-
-$stmt->close();
-$conn->close();
 ?>

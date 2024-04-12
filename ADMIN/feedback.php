@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../CSS/homestyle.css">
     <style>
         body{
-            background-image: url("../VIEW/images/images.jpeg");
+            background-image: url("../CSS/images/images.jpeg");
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
@@ -17,7 +17,7 @@
 <body>
     <header>
         <div class="logo">
-            <a href="../css/homestyle.css"><img src="../VIEW/images/SKIN.jpg" class="logo" width="70px" height="70px"></a> 
+            <a href="../css/homestyle.css"><img src="../CSS/images/SKIN.jpg" class="logo" width="70px" height="70px"></a> 
         </div>
         <nav>
             <ul>

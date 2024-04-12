@@ -6,7 +6,7 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-image: url('../VIEW/images/SKIN.jpg');  
+    background-image: url('../CSS/images/SKIN.jpg');  
     background-repeat: no-repeat;  
     background-size: cover;    
     background-size: cover;
@@ -90,7 +90,7 @@ body {
     min-height: 100vh;
     background-repeat: no-repeat;  
     background-size: cover;
-    background-image: url('../VIEW/images/SKIN.jpg'); 
+    background-image: url('../CSS/images/SKIN.jpg'); 
     background-size: cover;
     background-position: center;  
          
