@@ -40,7 +40,7 @@ include('../SETTINGS/connection.php');
     <br/>
     <div class="routine-steps"><?php echo nl2br(htmlspecialchars($routine['Steps'])); ?></div>
     <br/>
-    <a href="../action/delete_night_routine.php?id=<?php echo $routine['EveningID']; ?>" class="a_button">Delete Routine</a>
+    <a href="../ACTION/delete_night_routine.php?id=<?php echo $routine['EveningID']; ?>" class="a_button">Delete Routine</a>
     </div>
     <?php endforeach; ?>
     </div>

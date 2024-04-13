@@ -75,8 +75,8 @@ CREATE TABLE ProgressPictures (
 CREATE TABLE UserFeedback (
     FeedbackID INT PRIMARY KEY AUTO_INCREMENT,
     UserID INT,
+    Email VARCHAR(60) UNIQUE NOT NULL CHECK (Email LIKE "%@%"),
     Comments TEXT NOT NULL,
-    PostDate DATE NOT NULL,
     FOREIGN KEY (UserID) REFERENCES Users(UserID)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
