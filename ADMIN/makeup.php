@@ -26,17 +26,18 @@ session_start();
     </nav>
 </header>
 <div class='main_content'>
-<p>Browse through our diverse makeup routines</p>
+    <p>Browse through our diverse makeup routines</p>
 </div>
 
 <?php 
-include '../FUNCTIONS/makeup_fxn.php';
-if (isset($_SESSION['id'])) {
+    include '../FUNCTIONS/makeup_fxn.php';
+    if (isset($_SESSION['id'])) {
     $userID = $_SESSION['id']; 
     $var_data = getAllMakeup($userID); 
 
-    if (!empty($var_data)): ?>
-    <div class="routines-container">
+    if (!empty($var_data)): 
+    ?>
+    <div class="makeup-routines">
     <?php foreach ($var_data as $routine): ?>
     <div class="routine-box">
         <div class="routine-title"><?php echo htmlspecialchars($routine['Title']); ?></div>

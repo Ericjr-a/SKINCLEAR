@@ -11,7 +11,7 @@
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
-            font-family:'Times New Roman';
+            font-family: Arial, Helvetica, sans-serif;
         }
     </style>
 </head>
@@ -41,7 +41,7 @@
                 <input type="text" placeholder="Email" name="email"> </div>
             <div class="input_box">
                 <textarea name="comments" id="message" cols="50" rows="10"></textarea> </div>
-            <button type="submit" id="button" name="submit" class="btn">Done</button> 
+            <button type="submit" id="button" name="submit" class="form_button">Done</button> 
         </form> 
     </div>
  
