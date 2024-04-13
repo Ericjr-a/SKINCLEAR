@@ -24,9 +24,19 @@
             </ul>
         </nav>
 
-
     </header>
-        <div class ="home">
+    <div class="home_content">
+        <?php 
+        session_start(); 
+        include ('../ACTION/login_action');
+        if (isset($_SESSION['username'])) {
+            echo "Welcome, " . htmlspecialchars($_SESSION['username']) . " ! Ready to treat yourself?";
+        } else {
+            echo "You are not logged in.";
+        }
+        ?>
+    </div>
+    <div class ="home">
         <div class="main">
             <div class="box" id="leftbox"> 
                 <a href="../ADMIN/morning.php">
@@ -38,7 +48,7 @@
             </div> 
         </div> 
 
-        </div>
+    </div>
     <footer>
         <p>&copy; 2024 SkinClear. All rights reserved.</p>
     </footer>
